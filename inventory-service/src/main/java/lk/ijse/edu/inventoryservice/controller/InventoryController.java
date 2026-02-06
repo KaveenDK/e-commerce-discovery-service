@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/inventory")
 public class InventoryController {
 
-    @GetMapping("/helth")
+    @GetMapping("/health")
     public ResponseEntity<String> checkHelth(){
         return new ResponseEntity<>("Good", HttpStatusCode.valueOf(200));
     }
