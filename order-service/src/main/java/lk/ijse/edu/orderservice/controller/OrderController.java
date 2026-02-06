@@ -24,6 +24,6 @@ public class OrderController {
 
     @GetMapping("/health")
     public ResponseEntity<String> checkHelth(){
-        return new ResponseEntity<>("Good", HttpStatusCode.valueOf(200));
+        return new ResponseEntity<>("Order Good", HttpStatusCode.valueOf(200));
     }
 }

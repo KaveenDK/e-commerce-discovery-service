@@ -3,16 +3,18 @@ spring:
     name: api-gateway
   cloud:
     gateway:
-      routes:
-        - id: inventory-service
-          uri: lb://inventory-service
-          predicates:
-            - Path=/inventory-service/**
+      server:
+        webflux:
+          routes:
+            - id: inventory-service
+              uri: lb://inventory-service
+              predicates:
+                - Path=/inventory-service/**
 
-        - id: order-service
-          uri: lb://order-service
-          predicates:
-            - Path=/order-service/**
+            - id: order-service
+              uri: lb://order-service
+              predicates:
+                - Path=/order-service/**
 
 server:
   port: 8080

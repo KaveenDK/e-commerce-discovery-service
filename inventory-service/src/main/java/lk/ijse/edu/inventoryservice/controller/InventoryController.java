@@ -24,6 +24,6 @@ public class InventoryController {
 
     @GetMapping("/health")
     public ResponseEntity<String> checkHelth(){
-        return new ResponseEntity<>("Good", HttpStatusCode.valueOf(200));
+        return new ResponseEntity<>("Inventory Good", HttpStatusCode.valueOf(200));
     }
 }
